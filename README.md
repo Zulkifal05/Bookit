@@ -1,4 +1,4 @@
-# 📘 Book It – Ticket Booking Frontend SPA
+# 📘 Book It – Ticket Booking Frontend Project
 
 **Book It** is a lightweight single-page web application (SPA) built with **HTML**, **CSS**, and **JavaScript**. It enables users to book **cinema**, **railway**, and **match** tickets. The app uses **Object-Oriented Programming (OOP)** principles in JavaScript and stores all data in the browser using **Local Storage**—no backend required!
 
