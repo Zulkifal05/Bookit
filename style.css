@@ -71,7 +71,7 @@ nav {
     color: purple;
     font-weight: bolder;
     font-size: 1.7rem;
-    margin-top: 4%;
+    margin-top: 3%;
 }
 
 .login-signup-container {  /**Container for login/signup**/
@@ -142,8 +142,19 @@ footer {  /**Footer tag**/
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 3%;
     position: absolute;
     bottom: 0px;
+}
+
+footer {  /**Footer tag without position absolute for pages other then login/signup**/
+    height: 16.5vh;
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
 }
 
 .footer-main , .footer-contact {  /**Lines written in footer**/
@@ -195,4 +206,75 @@ strong {  /**For bolding creator name**/
     .Login-btn , .signup-btn {
         padding: 6%;
     }
+}
+
+/**Main Section**/
+
+.main-section {  /**Main page main container**/
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.main-section-divs {  /**Divs of main container**/
+    height: 450px;
+    max-width: 30%;
+    min-width: 300px;
+    padding: 3%;
+    background-color: rgb(229, 229, 229);
+    border-radius: 20px;
+    margin-top: 3%;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.main-section-divs-head {  /**Main headings of cards**/
+    text-align: center;
+    font-weight: bolder;
+    color: brown;
+    font-size: 1.6rem;
+}
+
+.Train-img {  
+    height: 152px;
+    width: 100%;
+    margin-top: 3%;
+    border-radius: 12px;
+}
+
+.Cinema-img {
+    width: 100%;
+    height: 155px;
+    margin-top: 3%;
+    border-radius: 12px;
+}
+
+.Hotel-img {
+    width: 100%;
+    height: 156px;
+    margin-top: 3%;
+    border-radius: 12px;
+}
+
+.Main-section-divs-paras {  /**Paras of each main card**/
+    font-weight: bolder;
+    margin-top: 13%;
+    color: gray;
+}
+
+.main-div-book-btn-div {  /**Div for booking button**/
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.main-div-book-btn-div button {  /**Button for ordering**/
+    background-color: rgb(229, 229, 229);
+    color: purple;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size: 1.1rem;
 }
