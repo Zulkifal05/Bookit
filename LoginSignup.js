@@ -6,7 +6,6 @@ const loginSignupContainer = document.querySelector(".login-signup-container");
 const mainSection = document.querySelector(".main-section");
 const footer = document.querySelector("footer");
 const mainHeading = document.querySelector(".main-heading");
-const navBtnsDiv = document.querySelector(".nav-btns");
 //Above are all necessary DOM nodes that are needed to be dynamically changed
 
 class LoginSignup {

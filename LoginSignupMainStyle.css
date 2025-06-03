@@ -30,7 +30,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-grow: 1.3;
 }
 
 .logo p {  /**Main heading p tag**/
@@ -49,28 +48,6 @@ nav {
     top: 20px;
     left: 97px;
     background-color: white;
-}
-
-.nav-btns {  /**Navigation bar buttons div**/
-    flex-grow: 1.7;
-    display: none;  /**When login/Signup succesfull then show buttons**/
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.nav-btns button {  /**Navigation bar buttons**/
-    background-color: rgb(55, 107, 203);
-    color: white;
-    font-weight: bolder;
-    padding: 1%;
-    font-size: 1rem;
-    cursor: pointer;
-    border: none;
-}
-
-.nav-btns button:hover {  /**For hover on navigation bar buttons**/
-    transform: scale(1.2);
-    transition: 0.3s;
 }
 
 /**Login/Signup**/
@@ -286,4 +263,17 @@ strong {  /**For bolding creator name**/
     text-decoration: underline;
     font-weight: bolder;
     font-size: 1.1rem;
+}
+
+.Account-btn {  /**Button for account**/
+    position: absolute;
+    z-index: 10;
+    right: 10px;
+    bottom: 120px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.Account-img {  /**Image of account**/
+    height: 50px;
 }
