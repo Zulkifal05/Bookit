@@ -6,6 +6,15 @@
     box-sizing: border-box;
 }
 
+@keyframes animateout {  /**Animation for whenever a thing is rendered out of UI**/
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 /**Navigation bar**/
 
 nav {
@@ -224,7 +233,7 @@ strong {  /**For bolding creator name**/
     padding: 3%;
     background-color: rgb(229, 229, 229);
     border-radius: 20px;
-    margin-top: 3%;
+    margin-top: 5%;
     box-shadow: 5px 5px 10px gray;
 }
 
