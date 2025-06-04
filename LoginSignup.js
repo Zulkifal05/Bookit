@@ -9,8 +9,10 @@ const mainHeading = document.querySelector(".main-heading");
 //Above are all necessary DOM nodes that are needed to be dynamically changed
 
 class LoginSignup {
-    constructor() {
+    constructor(username,password) {
         this.Infopara = document.createElement("p");  //Create a paragraph for showing info above login/signup buttons
+        this.username = username;
+        this.password = password;
     }
     Signup() {  //Function to signup user
         this.Infopara.style.textAlign = "center";
@@ -43,6 +45,8 @@ class LoginSignup {
                 users.push(newUserInfo);  //push new user in array containing all the objects of user data
                 localStorage.setItem("users",JSON.stringify(users));  //Then set the array in localstorage
                 this.Infopara.innerText = "User Signedup Successfully!";
+                this.username = username.value;
+                this.password = password.value;  //Enter signedin username & password values for later use
                 document.querySelector(".login-signup-btns").before(this.Infopara);  //Show information paragraph created at line 11
                 loginSignupContainer.style.animation = "animateout 1s ease-in 0.3s";
                 loginSignupContainer.addEventListener("animationend", () => {
@@ -75,6 +79,8 @@ class LoginSignup {
             }  //Line 66 to 72 gets localstorage data and checks for user entered data and verifies it
             if(userExists) {  //If user exists
                 this.Infopara.innerText = "Loggedin Successfully!";
+                this.username = username.value;
+                this.password = password.value;  //Enter loggedin username & password values for later use
                 document.querySelector(".login-signup-btns").before(this.Infopara);
                 loginSignupContainer.style.animation = "animateout 1s ease-in 0.3s";
                 loginSignupContainer.addEventListener("animationend", () => {
@@ -92,7 +98,7 @@ class LoginSignup {
     }
 }
 
-let user = new LoginSignup();
+let user = new LoginSignup("username","password");
 
 signupBtn.addEventListener("click" , () => {
     user.Infopara.remove();  //Make sure info paragraph about user's entry is hided at default

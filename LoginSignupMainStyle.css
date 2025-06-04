@@ -276,4 +276,5 @@ strong {  /**For bolding creator name**/
 
 .Account-img {  /**Image of account**/
     height: 50px;
+    border-radius: 50%;
 }
