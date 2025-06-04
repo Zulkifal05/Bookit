@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookit</title>
     <link rel="stylesheet" href="LoginSignupMainStyle.css">
+    <link rel="stylesheet" href="TrainPageStyle.css">
 </head>
 <body>
     <!--Navigation bar-->
@@ -61,6 +62,43 @@
         <img src="/Images/Account.png" alt="Account" class="Account-img">
     </div>
 
+    <!--Train booking page-->
+    <div class="train-book-page">
+        <div class="train-page-filters">
+            <div class="train-departure-destination-div">
+                <p class="train-filters-labels">Departure</p>
+                <select id="departure-select" class="train-filters-selects">
+                    <option value="Empty">Select</option>
+                    <option value="Peshawar">Peshawar</option>
+                    <option value="Rawalpindi">Rawalpindi</option>
+                    <option value="Gujranwala">Gujranwala</option>
+                    <option value="Lahore">Lahore</option>
+                    <option value="Faisalabad">Faisalabad</option>
+                    <option value="Multan">Multan</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Karachi">Karachi</option>
+                    <option value="Quetta">Quetta</option>
+                </select>
+            </div>
+            <div class="train-departure-destination-div">
+                <p class="train-filters-labels">Destination</p>
+                <select id="destination-select" class="train-filters-selects">
+                    <option value="Empty">Select</option>
+                    <option value="Peshawar">Peshawar</option>
+                    <option value="Rawalpindi">Rawalpindi</option>
+                    <option value="Gujranwala">Gujranwala</option>
+                    <option value="Lahore">Lahore</option>
+                    <option value="Faisalabad">Faisalabad</option>
+                    <option value="Multan">Multan</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Karachi">Karachi</option>
+                    <option value="Quetta">Quetta</option>
+                </select>
+            </div>
+            <button class="train-search-btn">Search</button>
+        </div>
+    </div>
+
     <!--Footer-->
     <footer>
         <div class="footer-div">  <!--Footer content container div-->
@@ -75,6 +113,7 @@
     </footer>
 
     <script src="LoginSignup.js"></script>
+    <script src="TrainTimings.js"></script>
     <script src="MainPage.js"></script>
 </body>
 </html>
