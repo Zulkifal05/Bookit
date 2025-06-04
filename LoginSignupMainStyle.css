@@ -272,6 +272,7 @@ strong {  /**For bolding creator name**/
     bottom: 120px;
     cursor: pointer;
     border-radius: 50%;
+    display: none;
 }
 
 .Account-img {  /**Image of account**/

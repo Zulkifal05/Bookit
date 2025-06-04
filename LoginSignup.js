@@ -6,6 +6,7 @@ const loginSignupContainer = document.querySelector(".login-signup-container");
 const mainSection = document.querySelector(".main-section");
 const footer = document.querySelector("footer");
 const mainHeading = document.querySelector(".main-heading");
+const accountBtn = document.querySelector(".Account-btn");
 //Above are all necessary DOM nodes that are needed to be dynamically changed
 
 class LoginSignup {
@@ -45,6 +46,7 @@ class LoginSignup {
                 users.push(newUserInfo);  //push new user in array containing all the objects of user data
                 localStorage.setItem("users",JSON.stringify(users));  //Then set the array in localstorage
                 this.Infopara.innerText = "User Signedup Successfully!";
+                accountBtn.style.display = "block";  //Show account button after user entered
                 this.username = username.value;
                 this.password = password.value;  //Enter signedin username & password values for later use
                 document.querySelector(".login-signup-btns").before(this.Infopara);  //Show information paragraph created at line 11
@@ -79,6 +81,7 @@ class LoginSignup {
             }  //Line 66 to 72 gets localstorage data and checks for user entered data and verifies it
             if(userExists) {  //If user exists
                 this.Infopara.innerText = "Loggedin Successfully!";
+                accountBtn.style.display = "block";  //Show account button after user entered
                 this.username = username.value;
                 this.password = password.value;  //Enter loggedin username & password values for later use
                 document.querySelector(".login-signup-btns").before(this.Infopara);
