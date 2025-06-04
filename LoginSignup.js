@@ -46,7 +46,6 @@ class LoginSignup {
                 users.push(newUserInfo);  //push new user in array containing all the objects of user data
                 localStorage.setItem("users",JSON.stringify(users));  //Then set the array in localstorage
                 this.Infopara.innerText = "User Signedup Successfully!";
-                accountBtn.style.display = "block";  //Show account button after user entered
                 this.username = username.value;
                 this.password = password.value;  //Enter signedin username & password values for later use
                 document.querySelector(".login-signup-btns").before(this.Infopara);  //Show information paragraph created at line 11
@@ -56,6 +55,7 @@ class LoginSignup {
                     footer.style.position = "static";
                     mainHeading.innerText = "Welcome to Bookit!";
                     mainSection.style.display = "flex";  //Show main after login/signup has vanished
+                    accountBtn.style.display = "block";  //Show account button after user entered
                 })
             }
         }
@@ -81,7 +81,6 @@ class LoginSignup {
             }  //Line 66 to 72 gets localstorage data and checks for user entered data and verifies it
             if(userExists) {  //If user exists
                 this.Infopara.innerText = "Loggedin Successfully!";
-                accountBtn.style.display = "block";  //Show account button after user entered
                 this.username = username.value;
                 this.password = password.value;  //Enter loggedin username & password values for later use
                 document.querySelector(".login-signup-btns").before(this.Infopara);
@@ -91,6 +90,7 @@ class LoginSignup {
                     footer.style.position = "static";
                     mainHeading.innerText = "Welcome to Bookit!";
                     mainSection.style.display = "flex";
+                    accountBtn.style.display = "block";  //Show account button after user entered
                 })  //If user exists do almost same tasks as when user signsup
             }
             else {  //If user entered incorrect username or password

@@ -201,6 +201,7 @@ strong {  /**For bolding creator name**/
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin-top: 3%;
 }
 
 .main-section-divs {  /**Divs of main container**/
@@ -210,8 +211,13 @@ strong {  /**For bolding creator name**/
     padding: 3%;
     background-color: rgb(229, 229, 229);
     border-radius: 20px;
-    margin-top: 5%;
     box-shadow: 5px 5px 10px gray;
+}
+
+@media (max-width : 914px) {  /**Increase margin top for smaller devices**/
+    .main-section-divs {
+        margin-top: 5%;
+    }
 }
 
 .main-section-divs-head {  /**Main headings of cards**/
@@ -269,7 +275,7 @@ strong {  /**For bolding creator name**/
     position: absolute;
     z-index: 10;
     right: 10px;
-    bottom: 120px;
+    top: 8px;
     cursor: pointer;
     border-radius: 50%;
     display: none;
