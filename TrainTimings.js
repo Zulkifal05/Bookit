@@ -202,3 +202,5 @@ const trainTimings = [
   ];
 
   localStorage.setItem("trainTimings",JSON.stringify(trainTimings));
+
+  //Saving traintimings to local storage
