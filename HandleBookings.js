@@ -7,6 +7,7 @@ class Bookings {
         //Above are neccesary DOM objects
 
         this.trainBookBtnPressCount = 0;  //Counter for founded trains at  entered destination & departure
+        this.trainsFoundedBookBtn = [];  //Contains id's of all the book buttons of trains founded
     }
 
     LoadPage(typeofPage) {  //Function to load train page
@@ -33,6 +34,10 @@ class Bookings {
         setTimeout(() => {
         emptyLeftPara.remove();
         },1500)
+    }
+
+    SaveTrainBooking() {  //Function for saving trains booked in localstorage
+
     }
 
     BookTrain() {  //Performs functionality after user clicks search train
@@ -96,7 +101,8 @@ class Bookings {
                     //Paragraph for seting date
 
                     let bookBtn = document.createElement("button");
-                    bookBtn.innerText = "Book it"
+                    bookBtn.innerText = "Book it";
+                    bookBtn.id = "trainsFoundedBookBtn";
                     bookBtn.setAttribute("class","trains-founded-book-btn");
                     //Create booking button in every founded train div
 
@@ -123,6 +129,14 @@ class Bookings {
             foundedTrainContainer.setAttribute("class","foundedTrainContainer");
             this.trainPage.append(foundedTrainContainer);
             //Set the class and append container of all the trains founded in main trains page div
+            this.trainsFoundedBookBtn = document.querySelectorAll("#trainsFoundedBookBtn");
+
+            //Event listener for all the book buttons of trains founded
+            this.trainsFoundedBookBtn.forEach((train) => {
+                train.addEventListener("click", () => {
+                    SaveTrainBooking();
+                })
+            })
         }
     }
 }
