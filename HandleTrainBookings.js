@@ -10,19 +10,17 @@ class Bookings {
         this.trainsFoundedBookBtn = [];  //Contains id's of all the book buttons of trains founded
     }
 
-    LoadPage(typeofPage) {  //Function to load train page
-        if(typeofPage === "train") {
-            this.trainPage.style.display = "flex";
-            this.searchTrainBtn.addEventListener("click", () => {
-                this.BookTrain();
-            })
-        }
+    LoadPage() {  //Function to load train page
+        this.trainPage.style.display = "flex";
+        this.searchTrainBtn.addEventListener("click", () => {
+            this.BookTrain();
+        })
     }
 
     CreateNode(text) {  //For creating span tags as required for founded trains
         let node = document.createElement("span");
         node.setAttribute("class","span");
-        node.innerText = `${text}`;
+        node.innerText = `${text} : `;
         return node;
     }
 
@@ -36,8 +34,19 @@ class Bookings {
         },1500)
     }
 
-    SaveTrainBooking() {  //Function for saving trains booked in localstorage
-
+    SaveTrainBooking(dep,dest,times,dates) {  //Function for saving trains booked in localstorage
+        let oneTrainBooking = {
+            username : user.username,
+            booking : "train",
+            departure : dep,
+            destination : dest,
+            time : times,
+            date : dates
+        }  //Create object containing one train booking record
+        //Below is fetching bookings array from localstorage and add new record object in that and again save in localstorage
+        let trainBooking = JSON.parse(localStorage.getItem("bookings"));
+        trainBooking.push(oneTrainBooking);
+        localStorage.setItem("bookings",JSON.stringify(trainBooking));
     }
 
     BookTrain() {  //Performs functionality after user clicks search train
@@ -77,25 +86,25 @@ class Bookings {
                     //Created div which will hold one train founded record
     
                     let departurePara = document.createElement("p");
-                    departurePara.innerText = ` : ${userDeparture}`;
+                    departurePara.innerText = `${userDeparture}`;
                     departurePara.prepend(this.CreateNode("From"));
                     departurePara.setAttribute("class","train-founded-paras");
                     //Paragraph for seting From
     
                     let destinationPara = document.createElement("p");
-                    destinationPara.innerText = ` : ${userDestination}`;
+                    destinationPara.innerText = `${userDestination}`;
                     destinationPara.prepend(this.CreateNode("To"));
                     destinationPara.setAttribute("class","train-founded-paras");
                     //Paragraph for seting To
 
                     let timePara = document.createElement("p");
-                    timePara.innerText = ` : ${trainArray[i].time} Hrs`;
+                    timePara.innerText = `${trainArray[i].time} Hrs`;
                     timePara.prepend(this.CreateNode("Time"));
                     timePara.setAttribute("class","train-founded-paras");
                     //Paragraph for seting time
 
                     let datePara = document.createElement("p");
-                    datePara.innerText = ` : ${trainArray[i].date}`;
+                    datePara.innerText = `${trainArray[i].date}`;
                     datePara.prepend(this.CreateNode("Date"));
                     datePara.setAttribute("class","train-founded-paras");
                     //Paragraph for seting date
@@ -129,12 +138,20 @@ class Bookings {
             foundedTrainContainer.setAttribute("class","foundedTrainContainer");
             this.trainPage.append(foundedTrainContainer);
             //Set the class and append container of all the trains founded in main trains page div
-            this.trainsFoundedBookBtn = document.querySelectorAll("#trainsFoundedBookBtn");
+            this.trainsFoundedBookBtn = document.querySelectorAll("#trainsFoundedBookBtn");  //Get the book buttons of all the booked buttons of trains founded
+
+            let trainsFoundedDivs = document.querySelectorAll(".trains-founded");  //All the divs of founded trains to access their child nodes info for saving booking
 
             //Event listener for all the book buttons of trains founded
-            this.trainsFoundedBookBtn.forEach((train) => {
+            this.trainsFoundedBookBtn.forEach((train,index) => {
                 train.addEventListener("click", () => {
-                    SaveTrainBooking();
+                    //Stored values of only those train divs details whose book btn is pressed by user (Index is for tracking the book btn of div whose button is pressed)
+                    let toSaveDeparture = trainsFoundedDivs[index].childNodes[0].innerText;
+                    let toSaveDestination = trainsFoundedDivs[index].childNodes[1].innerText;
+                    let toSaveTime = trainsFoundedDivs[index].childNodes[2].innerText;
+                    let toSaveDate = trainsFoundedDivs[index].childNodes[3].innerText;
+                    //Calling save function to save details of user's booked train in localstorage
+                    this.SaveTrainBooking(toSaveDeparture,toSaveDestination,toSaveTime,toSaveDate);
                 })
             })
         }

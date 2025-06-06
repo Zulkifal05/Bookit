@@ -11,6 +11,6 @@ let mainPageObj = new MainPage();
 mainPageObj.trainBookBtn.addEventListener("click", () => {  //Event listener for book now of train booking card in main page
     user.mainSection.style.display = "none";
     user.footer.style.position = "absolute";  //Beacause height of train page is less
-    book.LoadPage("train");
+    book.LoadPage();
     //Display train booking page and display none of previous page
 })
