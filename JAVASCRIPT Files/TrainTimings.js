@@ -202,6 +202,6 @@ const trainTimings = [
     { departure: 'Peshawar', destination: 'Karachi', time: 12, date: '2025-06-11' },
   ];
 
-  localStorage.setItem("trainTimings",JSON.stringify(trainTimings));
+  // localStorage.setItem("trainTimings",JSON.stringify(trainTimings));
 
   //Saving traintimings to local storage
