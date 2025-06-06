@@ -1,4 +1,4 @@
-class Bookings {
+class TrainBookings {
     constructor() {
         this.trainPage = document.querySelector(".train-book-page");
         this.departureSelect = document.querySelector("#departure-select");
@@ -10,8 +10,9 @@ class Bookings {
         this.trainsFoundedBookBtn = [];  //Contains id's of all the book buttons of trains founded
     }
 
-    LoadPage() {  //Function to load train page
+    LoadTrainPage() {  //Function to load train page
         this.trainPage.style.display = "flex";
+        //When filters search button is clicked BookTrain function should be called
         this.searchTrainBtn.addEventListener("click", () => {
             this.BookTrain();
         })
@@ -158,10 +159,9 @@ class Bookings {
     }
 }
   
-let book = new Bookings();  //Object created of Bookings class
+let book = new TrainBookings();  //Object created of Bookings class
 
-//Event listener for trains search button
-book.searchTrainBtn.addEventListener("click", () => {
-    book.BookTrain()
-})
-
+// // //Event listener for trains search button
+// book.searchTrainBtn.addEventListener("click", () => {
+//     book.BookTrain()
+// })

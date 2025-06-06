@@ -11,6 +11,17 @@ let mainPageObj = new MainPage();
 mainPageObj.trainBookBtn.addEventListener("click", () => {  //Event listener for book now of train booking card in main page
     user.mainSection.style.display = "none";
     user.footer.style.position = "absolute";  //Beacause height of train page is less
-    book.LoadPage();
+    user.footer.style.bottom = "0px";
+    user.mainHeading.innerText = "Search & Book Trains From Here!";  //Change main heading at top of page text
+    book.LoadTrainPage();
     //Display train booking page and display none of previous page
+})
+
+mainPageObj.cinemaBookBtn.addEventListener("click", () => {
+    user.mainSection.style.display = "none";
+    user.footer.style.position = "absolute";  //Beacause height of train page is less
+    user.footer.style.bottom = "0px";
+    user.mainHeading.innerText = "Search & Book Movie Tickets From Here!";  //Change main heading at top of page text
+    cinemaBookObj.LoadCinemaPage();
+    //Display Cinema booking page and display none of previous page
 })

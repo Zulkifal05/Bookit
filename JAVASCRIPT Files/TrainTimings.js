@@ -1,3 +1,4 @@
+//This file contains data needed to be saved and pushed to localstorage
 const trainTimings = [
     { departure: 'Gujranwala', destination: 'Multan', time: 18, date: '2025-06-09' },
     { departure: 'Quetta', destination: 'Karachi', time: 13, date: '2025-06-10' },
