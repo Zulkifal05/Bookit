@@ -13,7 +13,7 @@ mainPageObj.trainBookBtn.addEventListener("click", () => {  //Event listener for
     user.footer.style.position = "absolute";  //Beacause height of train page is less
     user.footer.style.bottom = "0px";
     user.mainHeading.innerText = "Search & Book Trains From Here!";  //Change main heading at top of page text
-    book.LoadTrainPage();
+    bookTrainObj.LoadTrainPage();
     //Display train booking page and display none of previous page
 })
 

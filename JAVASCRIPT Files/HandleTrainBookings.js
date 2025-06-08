@@ -26,13 +26,23 @@ class TrainBookings {
     }
 
     TrainInfoAfterSearch(text) {  //For poping information whenever problem with showing trains
+        this.searchTrainBtn.disabled = true;
         let emptyLeftPara = document.createElement("p")
         emptyLeftPara.setAttribute("class","emptyLeftPara");
         emptyLeftPara.innerText = `${text}`;
         this.trainPage.append(emptyLeftPara);
         setTimeout(() => {
         emptyLeftPara.remove();
+        this.searchTrainBtn.disabled = false;  //Searched button is disabled while infopara is displayed so user cannot search during that time
         },1500)
+    }
+
+    GenerateFoundedInfo(text,spanText,classToGive) {  //Function for creating paragraphs containing information for train & cinema bookings
+        let Para = document.createElement("p");
+        Para.innerText = `${text}`;
+        Para.prepend(this.CreateNode(spanText));
+        Para.setAttribute("class",classToGive);
+        return Para;
     }
 
     SaveTrainBooking(dep,dest,times,dates) {  //Function for saving trains booked in localstorage
@@ -159,9 +169,4 @@ class TrainBookings {
     }
 }
   
-let book = new TrainBookings();  //Object created of Bookings class
-
-// // //Event listener for trains search button
-// book.searchTrainBtn.addEventListener("click", () => {
-//     book.BookTrain()
-// })
+let bookTrainObj = new TrainBookings();  //Object created of Bookings class
