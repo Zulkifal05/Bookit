@@ -35,6 +35,7 @@ class CinemaBooking extends TrainBookings {  //Cinema class inherits from train 
     }
 
     GenerateInfoPara(text) {  //Function to generate a paragraph in case of problem with search
+        user.footer.style.position = "absolute";
         this.cinemaSearchBtn.disabled = true;
         let cinemaInfoPara = document.createElement("p");
         cinemaInfoPara.setAttribute("class","Cinema-info-para");
