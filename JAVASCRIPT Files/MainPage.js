@@ -23,5 +23,14 @@ mainPageObj.cinemaBookBtn.addEventListener("click", () => {
     user.footer.style.bottom = "0px";
     user.mainHeading.innerText = "Search & Book Movie Tickets From Here!";  //Change main heading at top of page text
     cinemaBookObj.LoadCinemaPage();
-    //Display Cinema booking page and display none of previous page
+    //Display cinema booking page and display none of previous page
+})
+
+mainPageObj.hotelBookBtn.addEventListener("click", () => {
+    user.mainSection.style.display = "none";
+    user.footer.style.position = "absolute";  //Beacause height of train page is less
+    user.footer.style.bottom = "0px";
+    user.mainHeading.innerText = "Search & Book Hotels From Here!";  //Change main heading at top of page text
+    hotelObj.LoadHotelPage();
+    //Display hotel booking page and display none of previous page
 })

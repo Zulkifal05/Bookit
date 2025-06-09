@@ -1,5 +1,5 @@
 .cinema-book-pg {  /**Cinema main page**/
-    display: flex;
+    display: none;
     flex-direction: column;
     margin-top: 5%;
 }
