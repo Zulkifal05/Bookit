@@ -1,0 +1,112 @@
+.Hotel-page {  /**Main hotel page**/
+    display: none;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.hotel-filters-div {  /**Search filters div**/
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7%;
+}
+
+#hotel-select {  /**Select in filters**/
+    font-size: 1.3rem;
+    padding: 0.5%;
+    border: none;
+    outline: 2px solid black;
+    font-weight: bolder;
+    border-radius: 13px;
+}
+
+.hotel-filter-search-btn {  /**Filters search button**/
+    font-size: 1.3rem;
+    padding: 0.8%;
+    font-weight: bolder;
+    border: none;
+    outline: none;
+    border-radius: 13px;
+    color: white;
+    background-color: purple;
+    cursor: pointer;
+}
+
+.hotel-filter-search-btn:hover {
+    background-color: white;
+    color: purple;
+    outline: 2px solid purple;
+}
+
+/**Below are created by js**/
+
+.Hotel-info-para {  /**Info para for wrong search**/
+    font-size: 1.5rem;
+    margin-top: 3%;
+    color: purple;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.Hotel-founded-container {  /**Container for hotels divs founded**/
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    align-items: center;
+}
+
+.Hotel-founded-paras {  /**Founded hotels divs paras**/
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1rem;
+    color: white;
+}
+
+.Hotel-founded {  /**Founded div of hotels**/
+    height: 16rem;
+    width: 30%;
+    background-color: rgb(55, 107, 203);
+    border-radius: 13px;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.Hotel-founded-book-btn {  /**Book button of every founded hotel div**/
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 2%;
+    border-radius: 7px;
+    margin-top: 1%;
+}
+
+.Hotel-founded-book-btn:hover {
+    background-color: rgb(55, 107, 203);
+    color: wheat;
+    outline: 2px solid wheat;
+}
+
+@media (max-width : 800px) {  /**Media querries for small devices**/
+    .Hotel-founded {
+        width: 60%;
+        margin-top: 3%;
+    }
+    .Hotel-info-para {
+        margin-top: 13%;
+    }
+    .Hotel-founded-book-btn {
+        margin-top: 5%;
+    }
+    .Hotel-pg-filter-search-btn {
+        padding: 1.3%;
+    }
+}

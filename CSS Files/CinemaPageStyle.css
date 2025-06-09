@@ -97,9 +97,6 @@
 
 @media (max-width : 800px) {  /**Media querries for small devices**/
     .Cinema-founded {
-        margin-top: 7%;
-    }
-    .Cinema-founded {
         width: 60%;
         margin-top: 3%;
     }
