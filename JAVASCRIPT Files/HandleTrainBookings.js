@@ -96,30 +96,12 @@ class TrainBookings {
                     let trainFounded = document.createElement("div");
                     //Created div which will hold one train founded record
     
-                    let departurePara = document.createElement("p");
-                    departurePara.innerText = `${userDeparture}`;
-                    departurePara.prepend(this.CreateNode("From"));
-                    departurePara.setAttribute("class","train-founded-paras");
-                    //Paragraph for seting From
-    
-                    let destinationPara = document.createElement("p");
-                    destinationPara.innerText = `${userDestination}`;
-                    destinationPara.prepend(this.CreateNode("To"));
-                    destinationPara.setAttribute("class","train-founded-paras");
-                    //Paragraph for seting To
-
-                    let timePara = document.createElement("p");
-                    timePara.innerText = `${trainArray[i].time} Hrs`;
-                    timePara.prepend(this.CreateNode("Time"));
-                    timePara.setAttribute("class","train-founded-paras");
-                    //Paragraph for seting time
-
-                    let datePara = document.createElement("p");
-                    datePara.innerText = `${trainArray[i].date}`;
-                    datePara.prepend(this.CreateNode("Date"));
-                    datePara.setAttribute("class","train-founded-paras");
-                    //Paragraph for seting date
-
+                    let departurePara = this.GenerateFoundedInfo(userDeparture,"From","train-founded-paras");
+                    let destinationPara = this.GenerateFoundedInfo(userDestination,"To","train-founded-paras");
+                    let timePara = this.GenerateFoundedInfo(`${trainArray[i].time} Hrs`,"Time","train-founded-paras");
+                    let datePara = this.GenerateFoundedInfo(`${trainArray[i].date} Hrs`,"Date","train-founded-paras");
+                    //Above are paras of information about founded trains
+                    
                     let bookBtn = document.createElement("button");
                     bookBtn.innerText = "Book it";
                     bookBtn.id = "trainsFoundedBookBtn";
@@ -170,3 +152,7 @@ class TrainBookings {
 }
   
 let bookTrainObj = new TrainBookings();  //Object created of Bookings class
+
+bookTrainObj.searchTrainBtn.addEventListener("click", () => {
+    bookTrainObj.BookTrain();
+})
