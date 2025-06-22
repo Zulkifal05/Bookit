@@ -3,6 +3,7 @@ class MainPage {
         this.trainBookBtn = document.querySelector("#Train-book-btn");
         this.cinemaBookBtn = document.querySelector("#Cinema-book-btn");
         this.hotelBookBtn = document.querySelector("#Hotel-book-btn");
+        this.accountBtn = document.querySelector(".Account-btn");
     }  //DOM element needed from main page (booking buttons)
 }
 
@@ -33,4 +34,16 @@ mainPageObj.hotelBookBtn.addEventListener("click", () => {
     user.mainHeading.innerText = "Search & Book Hotels From Here!";  //Change main heading at top of page text
     hotelObj.LoadHotelPage();
     //Display hotel booking page and display none of previous page
+})
+
+mainPageObj.accountBtn.addEventListener("click", () => {
+    cinemaBookObj.cinemaPage.style.display = "none";
+    bookTrainObj.trainPage.style.display = "none";
+    hotelObj.hotelPage.style.display = "none";
+    user.mainSection.style.display = "none";
+    //Remove previous pages which could have been displayed
+    user.footer.style.position = "absolute";  //Beacause height of train page is less
+    user.footer.style.bottom = "0px";
+    user.mainHeading.innerText = "Your Bookings!";  //Change main heading at top of page text
+    accountObj.LoadAccountPage();
 })

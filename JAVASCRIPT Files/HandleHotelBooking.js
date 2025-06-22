@@ -32,6 +32,7 @@ class HotelBookings extends CinemaBooking {
         Bookings.push(toSaveHotelObj);
         localStorage.setItem("bookings",JSON.stringify(Bookings));
         //Above get bookings array from localstorage push new hotel booking object in array and again save that array in localstorage
+        alert("Booking Done!");
     }
 
     GenerateInformationPara(text) {  //Function to generate a paragraph in case of problem with search
@@ -126,7 +127,7 @@ class HotelBookings extends CinemaBooking {
                     let toSaveCity = foundedHotelsDivs[index].childNodes[0].innerText;
                     let toSaveHotel = foundedHotelsDivs[index].childNodes[1].innerText;
                     let toSaveRating = foundedHotelsDivs[index].childNodes[2].innerText;
-                    let toSavePrice = foundedHotelsDivs[index].childNodes[3].innerText;
+                    let toSavePrice = `${foundedHotelsDivs[index].childNodes[3].innerText} Rs`;
                     let toSaveType = foundedHotelsDivs[index].childNodes[4].innerText;
 
                     //Above get all the chilnodes containing information and save them by calling saving function below 

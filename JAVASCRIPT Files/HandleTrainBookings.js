@@ -58,6 +58,7 @@ class TrainBookings {
         let trainBooking = JSON.parse(localStorage.getItem("bookings"));
         trainBooking.push(oneTrainBooking);
         localStorage.setItem("bookings",JSON.stringify(trainBooking));
+        alert("Booking Done!");
     }
 
     BookTrain() {  //Performs functionality after user clicks search train
@@ -99,7 +100,7 @@ class TrainBookings {
                     let departurePara = this.GenerateFoundedInfo(userDeparture,"From","train-founded-paras");
                     let destinationPara = this.GenerateFoundedInfo(userDestination,"To","train-founded-paras");
                     let timePara = this.GenerateFoundedInfo(`${trainArray[i].time} Hrs`,"Time","train-founded-paras");
-                    let datePara = this.GenerateFoundedInfo(`${trainArray[i].date} Hrs`,"Date","train-founded-paras");
+                    let datePara = this.GenerateFoundedInfo(`${trainArray[i].date}`,"Date","train-founded-paras");
                     //Above are paras of information about founded trains
                     
                     let bookBtn = document.createElement("button");

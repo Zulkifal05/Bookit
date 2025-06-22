@@ -32,6 +32,7 @@ class CinemaBooking extends TrainBookings {  //Cinema class inherits from train 
         Bookings.push(toSaveCinemaObj);
         localStorage.setItem("bookings",JSON.stringify(Bookings));
         //Above get bookings array from localstorage push new cinema booking object in array and again save that array in localstorage
+        alert("Booking Done!");
     }
 
     GenerateInfoPara(text) {  //Function to generate a paragraph in case of problem with search
