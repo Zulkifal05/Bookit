@@ -28,7 +28,7 @@ class CinemaBooking extends TrainBookings {  //Cinema class inherits from train 
             time : Time,
             movie : Movie
         }  //Create object of booked cinema ticket for saving booking in localstorage
-        let Bookings = JSON.parse(localStorage.getItem("bookings"));
+        let Bookings = JSON.parse(localStorage.getItem("bookings")) || [];
         Bookings.push(toSaveCinemaObj);
         localStorage.setItem("bookings",JSON.stringify(Bookings));
         //Above get bookings array from localstorage push new cinema booking object in array and again save that array in localstorage
