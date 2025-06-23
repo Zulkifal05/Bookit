@@ -153,7 +153,3 @@ class TrainBookings {
 }
   
 let bookTrainObj = new TrainBookings();  //Object created of Bookings class
-
-bookTrainObj.searchTrainBtn.addEventListener("click", () => {
-    bookTrainObj.BookTrain();
-})
