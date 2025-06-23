@@ -28,7 +28,7 @@ class HotelBookings extends CinemaBooking {
             price : Price,
             type : Type
         }  //Create object of booked hotel for saving booking in localstorage
-        let Bookings = JSON.parse(localStorage.getItem("bookings"));
+        let Bookings = JSON.parse(localStorage.getItem("bookings")) || [];
         Bookings.push(toSaveHotelObj);
         localStorage.setItem("bookings",JSON.stringify(Bookings));
         //Above get bookings array from localstorage push new hotel booking object in array and again save that array in localstorage
