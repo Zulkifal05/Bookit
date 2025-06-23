@@ -11,7 +11,7 @@
 - 🎟️ Booking options for:
   - Cinema  
   - Railway  
-  - **Hotels**
+  - Hotels
 - 🧠 Built using **JavaScript OOP** with **inheritance** for clean, modular code
 - 💾 Uses **Local Storage** to persist user data and booking information
 - 📱 **Responsive layout** using modern CSS for all screen sizes
