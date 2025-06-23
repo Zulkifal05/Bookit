@@ -138,7 +138,12 @@ let accountObj = new Account();
 accountObj.mainPageBtn.addEventListener("click", () => {
     document.querySelector(".Account-btn").disabled = false;
     accountObj.mainPageBtn.style.display = "none";
+    //Below 4 lines of code remove those pages from display which maybe displayed when go to home button is pressed
     accountObj.accountPage.style.display = "none";
+    document.querySelector(".train-book-page").style.display = "none";
+    document.querySelector(".cinema-book-pg").style.display = "none";
+    document.querySelector(".Hotel-page").style.display = "none";
+    //Below is to remove all the showed bookings if user goes to menu from account page
     document.querySelectorAll(".Single-booking-container").forEach((item) => {
         item.remove();
     })

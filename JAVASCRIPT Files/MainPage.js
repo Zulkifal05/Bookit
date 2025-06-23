@@ -9,40 +9,34 @@ class MainPage {
 
 let mainPageObj = new MainPage();
 
-mainPageObj.trainBookBtn.addEventListener("click", () => {  //Event listener for book now of train booking card in main page
-    user.mainSection.style.animation = "animateout 1s ease-in 0.3s";
-    user.mainSection.addEventListener("animationend", () => {
-        user.mainSection.style.display = "none";
-        user.footer.style.position = "absolute";  //Beacause height of train page is less
-        user.footer.style.bottom = "0px";
-        user.mainHeading.innerText = "Search & Book Trains From Here!";  //Change main heading at top of page text
-        bookTrainObj.LoadTrainPage();
-        //Display train booking page and display none of previous page
-    })
+mainPageObj.trainBookBtn.addEventListener("click", () => {  //Event listener for book now of train booking card in main page   
+    user.mainSection.style.display = "none";
+    user.footer.style.position = "absolute";  //Beacause height of train page is less
+    user.footer.style.bottom = "0px";
+    user.mainHeading.innerText = "Search & Book Trains From Here!";  //Change main heading at top of page text
+    document.querySelector(".Main-page-btn").style.display = "block";  //Show menu going button
+    bookTrainObj.LoadTrainPage();
+    //Display train booking page and display none of previous page
 })
 
 mainPageObj.cinemaBookBtn.addEventListener("click", () => {
-    user.mainSection.style.animation = "animateout 1s ease-in 0.3s";
-    user.mainSection.addEventListener("animationend", () => {
-        user.mainSection.style.display = "none";
-        user.footer.style.position = "absolute";  //Beacause height of train page is less
-        user.footer.style.bottom = "0px";
-        user.mainHeading.innerText = "Search & Book Movie Tickets From Here!";  //Change main heading at top of page text
-        cinemaBookObj.LoadCinemaPage();
-        //Display cinema booking page and display none of previous page
-    })
+    user.mainSection.style.display = "none";
+    user.footer.style.position = "absolute";  //Beacause height of train page is less
+    user.footer.style.bottom = "0px";
+    user.mainHeading.innerText = "Search & Book Movie Tickets From Here!";  //Change main heading at top of page text
+    document.querySelector(".Main-page-btn").style.display = "block";  //Show menu going button
+    cinemaBookObj.LoadCinemaPage();
+    //Display cinema booking page and display none of previous page
 })
 
 mainPageObj.hotelBookBtn.addEventListener("click", () => {
-    user.mainSection.style.animation = "animateout 1s ease-in 0.3s";
-    user.mainSection.addEventListener("animationend", () => {
-        user.mainSection.style.display = "none";
-        user.footer.style.position = "absolute";  //Beacause height of train page is less
-        user.footer.style.bottom = "0px";
-        user.mainHeading.innerText = "Search & Book Hotels From Here!";  //Change main heading at top of page text
-        hotelObj.LoadHotelPage();
-        //Display hotel booking page and display none of previous page
-    })
+    user.mainSection.style.display = "none";
+    user.footer.style.position = "absolute";  //Beacause height of train page is less
+    user.footer.style.bottom = "0px";
+    user.mainHeading.innerText = "Search & Book Hotels From Here!";  //Change main heading at top of page text
+    document.querySelector(".Main-page-btn").style.display = "block";  //Show menu going button
+    hotelObj.LoadHotelPage();
+    //Display hotel booking page and display none of previous page
 })
 
 mainPageObj.accountBtn.addEventListener("click", () => {
