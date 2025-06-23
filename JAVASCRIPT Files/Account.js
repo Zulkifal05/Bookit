@@ -123,6 +123,9 @@ class Account {
             para.style.color = "rgb(55, 107, 203)";
             para.style.marginTop = "5%"
             this.accountPage.append(para);
+            setTimeout(() => {
+                para.remove();
+            },1500)
         }
         else if(foundedBookingsCounter > 1) {
             document.querySelector("footer").style.position = "static";
