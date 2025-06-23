@@ -95,7 +95,7 @@ class Account {
 
     //This function shows bookings and handles showing booking process
     ShowBookings() {
-        this.Bookings = JSON.parse(localStorage.getItem("bookings"));  //Fetch all bookings from localstorage
+        this.Bookings = JSON.parse(localStorage.getItem("bookings")) || [];  //Fetch all bookings from localstorage and if no bookings then give empty array
         let foundedBookingsCounter = 0;  // This keeps track of no of bookings found
 
         for(let i=0 ; i<this.Bookings.length ; i++) {  //Loop for each booking fetched
