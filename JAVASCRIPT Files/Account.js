@@ -8,6 +8,7 @@ class Account {
     //This function loads account page which basically shows bookings
     LoadAccountPage() {
         this.accountPage.style.display = "flex";
+        this.mainPageBtn.style.display = "block";
         this.ShowBookings();
     }
 
@@ -40,7 +41,6 @@ class Account {
 
         this.accountPage.append(singleBookingContainer);
         document.querySelector(".Account-btn").disabled = true;
-        this.mainPageBtn.style.display = "block";
     }
 
     //This function displays cinema bookings
@@ -66,7 +66,6 @@ class Account {
 
         this.accountPage.append(singleBookingContainer);
         document.querySelector(".Account-btn").disabled = true;
-        this.mainPageBtn.style.display = "block";
     }
 
     //This function displays hotel bookings
@@ -92,7 +91,6 @@ class Account {
 
         this.accountPage.append(singleBookingContainer);
         document.querySelector(".Account-btn").disabled = true;
-        this.mainPageBtn.style.display = "block";
     }
 
     //This function shows bookings and handles showing booking process
