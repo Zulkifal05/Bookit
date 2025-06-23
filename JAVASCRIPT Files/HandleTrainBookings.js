@@ -55,7 +55,7 @@ class TrainBookings {
             date : dates
         }  //Create object containing one train booking record
         //Below is fetching bookings array from localstorage and add new record object in that and again save in localstorage
-        let trainBooking = JSON.parse(localStorage.getItem("bookings"));
+        let trainBooking = JSON.parse(localStorage.getItem("bookings")) || [];
         trainBooking.push(oneTrainBooking);
         localStorage.setItem("bookings",JSON.stringify(trainBooking));
         alert("Booking Done!");
