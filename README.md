@@ -47,3 +47,6 @@ This project is ideal for:
 - Building dynamic frontends without any frameworks
 - Understanding **SPA architecture** with only HTML, CSS, and JS
 - Exploring client-side data storage techniques
+
+## Demo
+ Video link : https://www.linkedin.com/posts/syed-zulkifal-ali-shah-514b76338_webdevelopment-javascript-frontenddevelopment-ugcPost-7342859549533462529-7tPq/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFTj5mABZdQFZZyZZs8Rb8oDyEHOor-UJLg
